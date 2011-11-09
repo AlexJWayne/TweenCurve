@@ -1,5 +1,5 @@
 (function() {
-  var Curve, Tween, fn, name, _fn;
+  var Curve, Tween, fn, name, scope, _fn;
   var __hasProp = Object.prototype.hasOwnProperty;
 
   Tween = {
@@ -164,8 +164,10 @@
     _fn(name, fn);
   }
 
-  window.Tween = Tween;
+  scope = window || module.exports;
 
-  window.Curve = Curve;
+  scope.Tween = Tween;
+
+  scope.Curve = Curve;
 
 }).call(this);

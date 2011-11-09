@@ -150,6 +150,6 @@ for own name, fn of Tween
     Curve[name] = (n) ->
       fn n, 0, 1, 1
 
-
-window.Tween = Tween
-window.Curve = Curve
+scope = window || module.exports
+scope.Tween = Tween
+scope.Curve = Curve
