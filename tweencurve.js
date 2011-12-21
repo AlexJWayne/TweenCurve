@@ -1,6 +1,6 @@
 (function() {
-  var Curve, Tween, fn, name, scope, _fn;
-  var __hasProp = Object.prototype.hasOwnProperty;
+  var Curve, Tween, fn, name, scope, _fn,
+    __hasProp = Object.prototype.hasOwnProperty;
 
   Tween = {
     linear: function(t, b, c, d) {
@@ -164,7 +164,7 @@
     _fn(name, fn);
   }
 
-  scope = window || module.exports;
+  scope = typeof window !== "undefined" && window !== null ? window : exports;
 
   scope.Tween = Tween;
 
